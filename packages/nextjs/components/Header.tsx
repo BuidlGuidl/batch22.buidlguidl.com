@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { hardhat } from "viem/chains";
 import { Bars3Icon, BugAntIcon } from "@heroicons/react/24/outline";
-import { BuidlGuidlLogo } from "~~/components/assets/BuidlGuidlLogo";
 import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
 import { useOutsideClick, useTargetNetwork } from "~~/hooks/scaffold-eth";
 
@@ -83,7 +83,7 @@ export const Header = () => {
         </details>
         <Link href="/" passHref className="hidden lg:flex items-center gap-2 ml-4 mr-6 shrink-0">
           <div className="flex relative w-10 h-10">
-            <BuidlGuidlLogo className="w-10 h-10" />
+            <Image alt="Batch 22 logo" className="cursor-pointer" fill src="/batch22-logo.svg" />
           </div>
           <div className="flex flex-col">
             <span className="font-bold leading-tight">Batch 22</span>
