@@ -3,6 +3,7 @@
 // @refresh reset
 import { AddressInfoDropdown } from "./AddressInfoDropdown";
 import { AddressQRCodeModal } from "./AddressQRCodeModal";
+import { BatchStatus } from "./BatchStatus";
 import { RevealBurnerPKModal } from "./RevealBurnerPKModal";
 import { WrongNetworkDropdown } from "./WrongNetworkDropdown";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
@@ -44,6 +45,7 @@ export const RainbowKitCustomConnectButton = () => {
 
               return (
                 <>
+                  <BatchStatus address={account.address as Address} />
                   <div className="flex flex-col items-center mr-2">
                     <Balance
                       address={account.address as Address}
