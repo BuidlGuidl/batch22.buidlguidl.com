@@ -10,7 +10,6 @@ export const BuidlGuidlLogo = ({ className }: { className: string }) => {
     >
       {/* Background circle */}
       <circle cx="50" cy="50" r="45" fill="currentColor" opacity="0.1" stroke="currentColor" strokeWidth="2" />
-      
       {/* Number 22 */}
       <text
         x="50"
@@ -23,7 +22,6 @@ export const BuidlGuidlLogo = ({ className }: { className: string }) => {
       >
         22
       </text>
-      
       {/* Batch label */}
       <text
         x="50"
@@ -37,7 +35,6 @@ export const BuidlGuidlLogo = ({ className }: { className: string }) => {
       >
         BATCH
       </text>
-      
       {/* Decorative elements */}
       <circle cx="25" cy="35" r="3" fill="currentColor" opacity="0.6" />
       <circle cx="75" cy="35" r="3" fill="currentColor" opacity="0.6" />
