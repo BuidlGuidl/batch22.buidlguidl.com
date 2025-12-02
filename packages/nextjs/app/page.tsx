@@ -13,8 +13,8 @@ const Home: NextPage = () => {
             <span className="block text-2xl mb-2">Welcome to</span>
             <span className="block text-4xl font-bold">Batch 22</span>
           </h1>
-          <p className="text-center text-lg">Get started by taking a look at your batch GitHub repository.</p>
-          <p className="text-lg flex gap-2 justify-center">
+          <p className="text-center text-lg mt-2">Building the future of web3 together</p>
+          <p className="text-lg flex gap-2 justify-center mt-6">
             <span className="font-bold">Checked in builders count:</span>
             <span>To Be Implemented</span>
           </p>
