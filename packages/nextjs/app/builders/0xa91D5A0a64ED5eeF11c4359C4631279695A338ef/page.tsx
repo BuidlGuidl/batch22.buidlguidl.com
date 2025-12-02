@@ -21,6 +21,7 @@ export default function BuilderPage() {
           <h1 className="text-4xl font-bold mt-4 mb-2">Uchechukwu Ekezie</h1>
           <div className="flex flex-col items-center gap-2 mb-4">
             <Address address={BUILDER_ADDRESS} format="long" blockExplorerAddressLink={blockExplorerAddressLink} />
+            <span className="font-bold text-sm">Batch 22</span>
             <div className="flex gap-2 items-center">
               <span className="font-bold text-sm">Balance:</span>
               <Balance address={BUILDER_ADDRESS} />
@@ -59,7 +60,7 @@ export default function BuilderPage() {
             </a>
             {/* Update the href below with your Twitter/X profile URL */}
             <a
-              href="https://twitter.com/yourhandle"
+              href="https://x.com/dev_uchee"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 p-4 bg-base-200 rounded-xl hover:bg-base-300 transition-colors"
@@ -71,7 +72,7 @@ export default function BuilderPage() {
             </a>
             {/* Update the href below with your LinkedIn profile URL */}
             <a
-              href="https://linkedin.com/in/yourprofile"
+              href="https://linkedin.com/in/uchenna-ekezie-11990025a"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 p-4 bg-base-200 rounded-xl hover:bg-base-300 transition-colors"
@@ -81,7 +82,7 @@ export default function BuilderPage() {
               </svg>
               <span className="font-semibold">LinkedIn</span>
             </a>
-            <a
+            {/* <a
               href="https://etherscan.io/address/0xa91D5A0a64ED5eeF11c4359C4631279695A338ef"
               target="_blank"
               rel="noopener noreferrer"
@@ -91,7 +92,7 @@ export default function BuilderPage() {
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
               </svg>
               <span className="font-semibold">Etherscan</span>
-            </a>
+            </a> */}
           </div>
         </div>
 
@@ -99,16 +100,24 @@ export default function BuilderPage() {
         <div className="bg-base-100 border-base-300 border shadow-md shadow-secondary rounded-3xl px-6 lg:px-8 py-6 mt-6">
           <h2 className="text-2xl font-bold mb-4">Skills & Interests</h2>
           <div className="flex flex-wrap gap-2">
-            {["Solidity", "Smart Contracts", "Web3", "DeFi", "Next.js", "TypeScript", "Hardhat", "Ethereum"].map(
-              skill => (
-                <span
-                  key={skill}
-                  className="px-4 py-2 bg-secondary text-secondary-content rounded-full text-sm font-semibold"
-                >
-                  {skill}
-                </span>
-              ),
-            )}
+            {[
+              "Solidity",
+              "Smart Contracts",
+              "Web3",
+              "DeFi",
+              "Next.js",
+              "TypeScript",
+              "Hardhat",
+              "Ethereum",
+              "Rust",
+            ].map(skill => (
+              <span
+                key={skill}
+                className="px-4 py-2 bg-secondary text-secondary-content rounded-full text-sm font-semibold"
+              >
+                {skill}
+              </span>
+            ))}
           </div>
         </div>
       </div>
