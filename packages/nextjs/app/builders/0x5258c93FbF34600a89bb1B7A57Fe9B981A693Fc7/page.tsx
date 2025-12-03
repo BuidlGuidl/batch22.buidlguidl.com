@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { AddressBlock } from "./AddressBlock";
+import { Address } from "@scaffold-ui/components";
 import type { NextPage } from "next";
 
 const KhanoPage: NextPage = () => {
@@ -20,14 +20,15 @@ const KhanoPage: NextPage = () => {
         member of BuidlGuidl Batch 22.
       </p>
 
-      {/* Client-side address rendering */}
-      <AddressBlock />
+      <div className="flex flex-col items-center gap-2">
+        <p className="text-sm font-semibold">Address:</p>
+        <Address address="0x5258c93FbF34600a89bb1B7A57Fe9B981A693Fc7" />
+      </div>
 
       <div className="mt-6 flex space-x-8 text-lg">
         <a href="https://x.com/MrKhano" target="_blank" className="text-blue-400 hover:underline">
           Twitter
         </a>
-
         <a href="https://github.com/MrKhano" target="_blank" className="text-purple-400 hover:underline">
           GitHub
         </a>
