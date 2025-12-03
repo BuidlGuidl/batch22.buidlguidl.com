@@ -1,25 +1,25 @@
 import Image from "next/image";
+import { Address } from "@scaffold-ui/components";
+import { NextPage } from "next";
 
-export default function BuilderPage() {
+const KhanoPage: NextPage = () => {
   return (
-    <div className="flex flex-col items-center justify-center p-10 text-center">
+    <div className="flex flex-col items-center justify-center p-10 text-center gap-6">
       <Image
-        src="https://avatars.githubusercontent.com/u/00000000"
-        alt="Khano Avatar"
+        src="https://avatars.githubusercontent.com/u/00000000?v=4"
+        alt="Khano avatar"
         width={120}
         height={120}
-        className="rounded-full shadow-lg mb-6"
+        className="rounded-full shadow-lg"
       />
 
-      <h1 className="text-3xl font-bold mb-4">Khano</h1>
+      <h1 className="text-3xl font-bold">Khano</h1>
 
-      <p className="text-lg text-gray-300 max-w-xl mb-6">Builder and Web3 adventurer. Member of BuidlGuidl Batch 22.</p>
+      <p className="text-lg text-gray-300 max-w-xl">Builder and Web3 adventurer. Member of BuidlGuidl Batch 22.</p>
 
-      <div className="space-y-1 text-sm">
-        <p>
-          <strong>Address:</strong>
-        </p>
-        <p className="font-mono text-sm text-blue-400">0x5258c93FbF34600a89bb1B7A57Fe9B981A693Fc7</p>
+      <div className="flex flex-col items-center gap-2">
+        <p className="text-sm font-semibold">Address:</p>
+        <Address address="0x5258c93FbF34600a89bb1B7A57Fe9B981A693Fc7" />
       </div>
 
       <div className="mt-6 flex space-x-6">
@@ -33,4 +33,6 @@ export default function BuilderPage() {
       </div>
     </div>
   );
-}
+};
+
+export default KhanoPage;
