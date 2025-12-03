@@ -10,7 +10,7 @@ export default function Page() {
             Nishant Kumar
           </h1>
           <p className="text-sm text-gray-400">
-            <b>Address: </b>0x0eD3f043ad4Fe71D00dE45F6077b022576C4B86B
+            <b>Address: </b>
           </p>
         </div>
         <div className="border-t border-white/5 my-4" />
