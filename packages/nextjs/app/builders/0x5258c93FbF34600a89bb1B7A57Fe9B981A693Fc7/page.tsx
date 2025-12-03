@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Address } from "@scaffold-ui/components";
 import type { NextPage } from "next";
