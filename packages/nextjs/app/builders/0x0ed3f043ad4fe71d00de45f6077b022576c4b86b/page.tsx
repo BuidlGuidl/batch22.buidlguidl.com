@@ -1,7 +1,8 @@
 import { GithubIcon, TwitterIcon } from "./icons";
 import { Address } from "@scaffold-ui/components";
+import type { NextPage } from "next";
 
-export default function Page() {
+const NicksProfile: NextPage = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-[#0a0a0a] text-gray-900 dark:text-gray-200 flex justify-center pt-10 pb-10 transition-colors">
       <div className="font-sans w-full max-w-lg p-10 rounded-3xl bg-gray-50 dark:bg-[#111111]/60 backdrop-blur-xl border border-gray-200 dark:border-white/10 space-y-8 shadow-xl shadow-black/40">
@@ -20,14 +21,15 @@ export default function Page() {
         {/* About Me */}
         <div>
           <h2 className="text-base font-semibold text-gray-700 dark:text-gray-300 mb-3">Who am I?</h2>
-          <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-            ⚡ Prefinal-year engineering student diving deep into Ethereum development.
-            <br />
-            Leveling up through Cyfrin Updraft, Alchemy University, and Encode Club — learning advanced Solidity,
-            testing, & security.
-            <br />
-            Love building efficient smart contracts + improving Web3 UX by breaking chains & fixing them again 😄
-          </p>
+          <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+            <p>⚡ Prefinal-year engineering student diving deep into Ethereum development.</p>
+            <p>
+              {" "}
+              Leveling up through Cyfrin Updraft, Alchemy University, and Encode Club — learning advanced Solidity,
+              testing, & security.
+            </p>
+            <p>Love building efficient smart contracts + improving Web3 UX by breaking chains & fixing them again 😄</p>
+          </div>
         </div>
 
         <div className="border-t border-gray-300 dark:border-white/10" />
@@ -90,4 +92,6 @@ export default function Page() {
       </div>
     </div>
   );
-}
+};
+
+export default NicksProfile;
