@@ -1,6 +1,6 @@
+import { Address } from "@scaffold-ui/components";
 import type { NextPage } from "next";
 import { BlockieAvatar } from "~~/components/scaffold-eth";
-import { Address } from "@scaffold-ui/components";
 
 const address = "0x343Ab62785f8109a888d18db1Da3FDb7467ff538";
 const name = "Wizz";
