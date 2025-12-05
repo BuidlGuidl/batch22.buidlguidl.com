@@ -1689,6 +1689,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@graphql-typed-document-node/core@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "@graphql-typed-document-node/core@npm:3.2.0"
+  peerDependencies:
+    graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
+  checksum: fa44443accd28c8cf4cb96aaaf39d144a22e8b091b13366843f4e97d19c7bfeaf609ce3c7603a4aeffe385081eaf8ea245d078633a7324c11c5ec4b2011bb76d
+  languageName: node
+  linkType: hard
+
 "@heroicons/react@npm:^2.1.5":
   version: 2.1.5
   resolution: "@heroicons/react@npm:2.1.5"
@@ -4056,6 +4065,8 @@ __metadata:
     eslint-config-next: ^15.2.3
     eslint-config-prettier: ^10.1.1
     eslint-plugin-prettier: ^5.2.4
+    graphql: ^16.12.0
+    graphql-request: ^7.3.5
     kubo-rpc-client: ^5.0.2
     lucide-react: ^0.468.0
     next: ^15.2.3
@@ -10932,6 +10943,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"graphql-request@npm:^7.3.5":
+  version: 7.3.5
+  resolution: "graphql-request@npm:7.3.5"
+  dependencies:
+    "@graphql-typed-document-node/core": ^3.2.0
+  peerDependencies:
+    graphql: 14 - 16
+  checksum: 05d6ee3c84f197bc14669d805ec942f4ed8230e091b8c52d2cebdaebbacf19760d830a6d03c5fe2d739b74a72d742eef9fef246718dbab95bccbb5ed8a5919a2
+  languageName: node
+  linkType: hard
+
+"graphql@npm:^16.12.0":
+  version: 16.12.0
+  resolution: "graphql@npm:16.12.0"
+  checksum: c0d2435425270c575091861c9fd82d7cebc1fb1bd5461e05c36521a988f69c5074461e27b89ab70851fabc72ec9d988235f288ba7bbeff67d08a973e8b9d6d3d
+  languageName: node
+  linkType: hard
+
 "h3@npm:^1.15.2":
   version: 1.15.3
   resolution: "h3@npm:1.15.3"
@@ -16408,6 +16437,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "se-2@workspace:."
   dependencies:
+    graphql-request: ^7.3.5
     husky: ^9.1.6
     lint-staged: ^15.2.10
   languageName: unknown
