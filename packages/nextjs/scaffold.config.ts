@@ -13,6 +13,8 @@ export const DEFAULT_ALCHEMY_API_KEY = "cR4WnXePioePZ5fFrnSiR";
 
 const scaffoldConfig = {
   // The networks on which your DApp is live
+  // For local testing: use [chains.hardhat]
+  // For live deployment: use [chains.arbitrum]
   targetNetworks: [chains.arbitrum],
 
   // The interval at which your front-end polls the RPC servers for new data
