@@ -3,8 +3,13 @@ import Link from "next/link";
 import { Address } from "@scaffold-ui/components";
 import type { NextPage } from "next";
 
-const SOCIAL_LINKS = [
-  { href: "https://github.com/tonnycro", label: "GitHub", icon: "💻" },
+const SKILLS = [
+  { name: "Solidity", color: "badge-accent" },
+  { name: "Web3", color: "badge-info" },
+  { name: "Smart Contracts", color: "badge-success" },
+  { name: "DeFi", color: "badge-warning" },
+  { name: "React", color: "badge-secondary" },
+  { name: "TypeScript", color: "badge-primary" },
 ];
 
 const TonnyPage: NextPage = () => {
@@ -45,12 +50,11 @@ const TonnyPage: NextPage = () => {
                   Solidity and expanding my skills in the DeFi ecosystem.
                 </p>
                 <div className="mt-4 flex justify-center gap-2 flex-wrap">
-                  <span className="badge badge-accent">Solidity</span>
-                  <span className="badge badge-info">Web3</span>
-                  <span className="badge badge-success">Smart Contracts</span>
-                  <span className="badge badge-warning">DeFi</span>
-                  <span className="badge badge-secondary">React</span>
-                  <span className="badge badge-primary">TypeScript</span>
+                 {SKILLS.map(skill => (
+                    <span key={skill.name} className={`badge ${skill.color}`}>
+                      {skill.name}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
@@ -59,18 +63,15 @@ const TonnyPage: NextPage = () => {
             <div className="mb-8">
               <h2 className="text-2xl font-bold mb-4 text-center">Connect</h2>
               <div className="flex flex-wrap gap-3 justify-center">
-                {SOCIAL_LINKS.map(({ href, label, icon }) => (
                   <Link
-                    key={href}
-                    href={href}
+                    href="https://github.com/tonnycro"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-outline btn-accent gap-2 hover:scale-105 hover:shadow-lg transition-all"
+                    className="btn btn-accent gap-2 hover:scale-105 hover:shadow-lg transition-all"
                   >
-                    <span>{icon}</span>
-                    {label}
+                    <span>💻</span>
+                    GitHub
                   </Link>
-                ))}
               </div>
             </div>
           </div>
