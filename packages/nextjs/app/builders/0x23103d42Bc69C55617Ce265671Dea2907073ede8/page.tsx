@@ -50,7 +50,7 @@ const TonnyPage: NextPage = () => {
                   Solidity and expanding my skills in the DeFi ecosystem.
                 </p>
                 <div className="mt-4 flex justify-center gap-2 flex-wrap">
-                 {SKILLS.map(skill => (
+                  {SKILLS.map(skill => (
                     <span key={skill.name} className={`badge ${skill.color}`}>
                       {skill.name}
                     </span>
@@ -63,15 +63,15 @@ const TonnyPage: NextPage = () => {
             <div className="mb-8">
               <h2 className="text-2xl font-bold mb-4 text-center">Connect</h2>
               <div className="flex flex-wrap gap-3 justify-center">
-                  <Link
-                    href="https://github.com/tonnycro"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-accent gap-2 hover:scale-105 hover:shadow-lg transition-all"
-                  >
-                    <span>💻</span>
-                    GitHub
-                  </Link>
+                <Link
+                  href="https://github.com/tonnycro"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-accent gap-2 hover:scale-105 hover:shadow-lg transition-all"
+                >
+                  <span>💻</span>
+                  GitHub
+                </Link>
               </div>
             </div>
           </div>
