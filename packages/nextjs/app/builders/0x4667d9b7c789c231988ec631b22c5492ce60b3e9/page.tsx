@@ -40,7 +40,7 @@ const BobPage: NextPage = () => {
         </div>
 
         {/* About Me Card */}
-        <div className="card bg-base-100 shadow-xl border-2 border-accent/20 hover:border-accent/40 transition-all">
+        <div className="card bg-base-100 shadow-xl border-2 border-accent/20">
           <div className="card-body">
             <h2 className="card-title text-2xl mb-3 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">About Me</h2>
             <p className="text-base-content/80 leading-relaxed">
@@ -52,7 +52,7 @@ const BobPage: NextPage = () => {
         </div>
 
         {/* Skills Card */}
-        <div className="card bg-base-100 shadow-xl border-2 border-accent/20 hover:border-accent/40 transition-all">
+        <div className="card bg-base-100 shadow-xl border-2 border-accent/20">
           <div className="card-body">
             <h2 className="card-title text-2xl mb-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">Tech Stack</h2>
             <div className="flex flex-wrap gap-3">
@@ -66,7 +66,7 @@ const BobPage: NextPage = () => {
         </div>
 
         {/* Connect Card */}
-        <div className="card bg-base-100 shadow-xl border-2 border-accent/20 hover:border-accent/40 transition-all">
+        <div className="card bg-base-100 shadow-xl border-2 border-accent/20">
           <div className="card-body">
             <h2 className="card-title text-2xl mb-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">Connect with Me</h2>
             <div className="flex justify-center">
