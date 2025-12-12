@@ -26,9 +26,7 @@ const BobPage: NextPage = () => {
               className="w-full h-full object-cover rounded-full"
             />
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-primary">
-            Bob
-          </h1>
+          <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-primary">Bob</h1>
           <p className="text-lg text-base-content/70 italic">Web3 Builder & Blockchain Enthusiast</p>
         </div>
 
@@ -42,7 +40,9 @@ const BobPage: NextPage = () => {
         {/* About Me Card */}
         <div className="card bg-base-100 shadow-xl border-2 border-accent/20">
           <div className="card-body">
-            <h2 className="card-title text-2xl mb-3 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">About Me</h2>
+            <h2 className="card-title text-2xl mb-3 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              About Me
+            </h2>
             <p className="text-base-content/80 leading-relaxed">
               Aspiring blockchain developer on a journey to master Web3 technologies. Passionate about building
               decentralized applications and exploring the potential of smart contracts. Currently diving deep into
@@ -54,7 +54,9 @@ const BobPage: NextPage = () => {
         {/* Skills Card */}
         <div className="card bg-base-100 shadow-xl border-2 border-accent/20">
           <div className="card-body">
-            <h2 className="card-title text-2xl mb-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">Tech Stack</h2>
+            <h2 className="card-title text-2xl mb-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              Tech Stack
+            </h2>
             <div className="flex flex-wrap gap-3">
               {SKILLS.map(skill => (
                 <span key={skill.name} className={`badge ${skill.color} badge-lg gap-2 px-4 py-3 font-medium`}>
@@ -68,7 +70,9 @@ const BobPage: NextPage = () => {
         {/* Connect Card */}
         <div className="card bg-base-100 shadow-xl border-2 border-accent/20">
           <div className="card-body">
-            <h2 className="card-title text-2xl mb-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">Connect with Me</h2>
+            <h2 className="card-title text-2xl mb-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              Connect with Me
+            </h2>
             <div className="flex justify-center">
               <Link
                 href="https://github.com/tonnycro"
@@ -87,7 +91,11 @@ const BobPage: NextPage = () => {
         <div className="text-center pt-6">
           <p className="text-sm text-base-content/50">
             Building with{" "}
-            <Link href="https://buidlguidl.com" className="text-blue-500 hover:text-blue-600 underline font-medium" target="_blank">
+            <Link
+              href="https://buidlguidl.com"
+              className="text-blue-500 hover:text-blue-600 underline font-medium"
+              target="_blank"
+              >
               BuidlGuidl
             </Link>{" "}
             Batch 22 🚀
