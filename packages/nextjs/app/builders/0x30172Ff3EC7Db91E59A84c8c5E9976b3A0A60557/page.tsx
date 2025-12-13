@@ -12,77 +12,90 @@ const SKILLS = [
 
 const KseniaPage: NextPage = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-base-300 via-base-200 to-base-100">
-      <div className="max-w-4xl w-full">
-        <div className="card bg-base-100 shadow-2xl border-2 border-primary/20">
-          <div className="card-body p-8 md:p-12">
-            {/* Header */}
-            <div className="text-center mb-8">
-            <div className="avatar mb-4">
-                <div className="w-24 h-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                  <Image
-                    src="/ksenchi-avatar.png"
-                    alt="ksenchi-avatar"
-                    width={96}
-                    height={96}
-                    className="w-full h-full object-cover rounded-full"
-                  />
-                </div>
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Ksenchi
-              </h1>
-              <div className="flex justify-center mb-4">
-                <Address address="0x30172ff3ec7db91e59a84c8c5e9976b3a0a60557" />
-              </div>
-            </div>
+    <div className="min-h-screen bg-base-300 p-4 md:p-8">
+      <div className="max-w-6xl mx-auto">
+        {/* Bento Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[minmax(120px,auto)]">
 
-            {/* Bio */}
-            <div className="text-center mb-8">
-              <div className="p-6 rounded-lg bg-base-200">
-                <h3 className="text-lg font-semibold mb-4 text-base-content/90">About Me</h3>
-                <p className="text-base md:text-lg text-base-content/80 leading-relaxed">
-                  Blockchain enthusiast and developer passionate about decentralized technologies. Exploring the world of
-                  smart contracts and building innovative Web3 solutions. Constantly learning and growing in the
-                  blockchain ecosystem.
-                </p>
-                <div className="mt-4 flex justify-center gap-2 flex-wrap">
-                  {SKILLS.map(skill => (
-                    <span key={skill.name} className={`badge ${skill.color}`}>
-                      {skill.name}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Social */}
-            <div className="mb-8">
-              <h2 className="text-2xl font-bold mb-4 text-center">Connect</h2>
-              <div className="flex flex-wrap gap-3 justify-center">
-                <Link
-                  href="https://github.com/kseniaeremekno"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-outline btn-primary gap-2"
-                >
-                  <span>💻</span>
-                  GitHub
-                </Link>
+          {/* Avatar Box - Top Left */}
+          <div className="md:col-span-1 md:row-span-2 bg-gradient-to-br from-primary/10 to-secondary/10 backdrop-blur-sm rounded-3xl p-6 flex items-center justify-center border border-primary/20">
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary to-secondary opacity-20 blur-2xl rounded-full"></div>
+              <div className="relative w-40 h-40 rounded-3xl overflow-hidden border-4 border-base-100 shadow-2xl">
+                <Image
+                  src="/ksenchi-avatar.png"
+                  alt="ksenchi-avatar"
+                  width={160}
+                  height={160}
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
-        </div>
 
-        {/* Bottom */}
-        <div className="text-center mt-6">
-          <p className="text-base-content/50 text-sm">
-            Part of{" "}
-            <Link href="https://buidlguidl.com" className="link link-primary" target="_blank">
-              BuidlGuidl
-            </Link>{" "}
-            Batch 22
-          </p>
+          {/* Name & Title Box - Top Right */}
+          <div className="md:col-span-2 bg-base-100 rounded-3xl p-6 md:p-8 border border-base-content/10 shadow-xl">
+            <div className="flex flex-col h-full justify-center">
+              <h1 className="text-4xl md:text-6xl font-black mb-3 tracking-tight text-base-content">
+                Ksenchi
+              </h1>
+              <p className="text-base-content/60 text-sm md:text-base mb-3">Web3 Developer • Blockchain Enthusiast</p>
+              <div className="inline-block">
+                <Address address="0x30172ff3ec7db91e59a84c8c5e9976b3a0a60557" />
+              </div>
+            </div>
+          </div>
+
+          {/* Skills Box - Middle Left */}
+          <div className="md:col-span-2 bg-base-100 rounded-3xl p-6 border border-base-content/10 shadow-xl">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-base-content/50 mb-4">Tech Stack</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {SKILLS.map(skill => (
+                <div
+                  key={skill.name}
+                  className="bg-base-200 rounded-xl p-4 text-center font-semibold text-sm border border-base-content/5"
+                >
+                  {skill.name}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* GitHub Box - Middle Right */}
+          <div className="md:col-span-1 bg-gradient-to-br from-primary to-secondary rounded-3xl p-6 flex items-center justify-center shadow-xl hover:shadow-2xl transition-shadow">
+            <Link
+              href="https://github.com/kseniaeremekno"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-center text-white"
+            >
+              <div className="text-5xl mb-2">💻</div>
+              <div className="font-bold">GitHub</div>
+              <div className="text-xs opacity-80 mt-1">View Profile</div>
+            </Link>
+          </div>
+
+          {/* Bio Box - Bottom Full Width */}
+          <div className="md:col-span-3 bg-base-100 rounded-3xl p-6 md:p-8 border border-base-content/10 shadow-xl">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-base-content/50 mb-4">About</h3>
+            <p className="text-base md:text-lg text-base-content/80 leading-relaxed">
+              Blockchain enthusiast and developer passionate about decentralized technologies. Exploring the world of
+              smart contracts and building innovative Web3 solutions. Constantly learning and growing in the blockchain
+              ecosystem.
+            </p>
+          </div>
+
+          {/* Footer Box - Bottom */}
+          <div className="md:col-span-3 bg-base-200/50 rounded-3xl p-4 text-center border border-base-content/5">
+            <p className="text-base-content/50 text-sm">
+              Part of{" "}
+              <Link href="https://buidlguidl.com" className="text-primary hover:underline font-semibold" target="_blank">
+                BuidlGuidl
+              </Link>{" "}
+              Batch 22
+            </p>
+          </div>
+
         </div>
       </div>
     </div>
