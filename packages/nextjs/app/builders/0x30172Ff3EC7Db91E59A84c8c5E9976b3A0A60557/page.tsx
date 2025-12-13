@@ -18,7 +18,7 @@ const KseniaPage: NextPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[minmax(120px,auto)]">
 
           {/* Avatar Box - Top Left */}
-          <div className="md:col-span-1 md:row-span-2 bg-gradient-to-br from-primary/10 to-secondary/10 backdrop-blur-sm rounded-3xl p-6 flex items-center justify-center border border-primary/20">
+          <div className="md:col-span-1 bg-gradient-to-br from-primary/10 to-secondary/10 backdrop-blur-sm rounded-3xl p-6 flex items-center justify-center border border-primary/20">
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-primary to-secondary opacity-20 blur-2xl rounded-full"></div>
               <div className="relative w-40 h-40 rounded-3xl overflow-hidden border-4 border-base-100 shadow-2xl">
