@@ -2,11 +2,7 @@ import Link from "next/link";
 import { useScaffoldReadContract } from "~~/hooks/scaffold-eth";
 
 export function BatchStatus() {
-  const {
-    data: checkedInCounter,
-    isLoading,
-    isSuccess,
-  } = useScaffoldReadContract({
+  useScaffoldReadContract({
     contractName: "BatchRegistry",
     functionName: "checkedInCounter",
   });
