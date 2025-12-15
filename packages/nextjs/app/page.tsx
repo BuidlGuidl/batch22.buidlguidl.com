@@ -6,21 +6,25 @@ import { BatchStatus } from "~~/components/BatchStatus";
 
 const Home: NextPage = () => {
   return (
-    <>
-      <div className="flex items-center flex-col grow pt-10">
-        <div className="px-5">
-          <h1 className="text-center">
-            <span className="block text-4xl font-bold">Batch 22</span>
-          </h1>
-          <p className="text-center text-lg mt-2">A decentralized cohort learning and building Web3</p>
-          <div className="flex justify-center">
-            <BatchStatus />
-          </div>
-        </div>
+    <div className="batch22-home min-h-screen w-full flex flex-col items-center">
+      <section className="hero relative flex flex-col items-center text-center px-5 pt-14 pb-10">
+        <h1 className="text-5xl font-semibold tracking-tight">
+          Batch <span className="opacity-90">22</span>
+        </h1>
 
+        <p className="mt-4 max-w-xl text-lg opacity-70">A decentralized cohort learning and building Web3</p>
+
+        <div className="mt-6 h-px w-32 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+
+        <div className="batch-state-wrapper">
+          <BatchStatus />
+        </div>
+      </section>
+
+      <section className="relative -mt-6 flex justify-center">
         <ActionCards />
-      </div>
-    </>
+      </section>
+    </div>
   );
 };
 
