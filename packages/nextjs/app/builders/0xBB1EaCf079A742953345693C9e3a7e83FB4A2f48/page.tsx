@@ -34,9 +34,9 @@ const AndrewPage: NextPage = () => {
         <section className="mb-16">
           <h2 className="text-3xl font-bold mb-6 text-primary">About</h2>
           <p className="text-lg text-base-content/80 leading-relaxed max-w-3xl">
-            Passionate about building the decentralized future. I focus on creating robust smart contracts and
-            intuitive dApps that bridge the gap between blockchain technology and real-world applications. Always
-            learning, always building.
+            Passionate about building the decentralized future. I focus on creating robust smart contracts and intuitive
+            dApps that bridge the gap between blockchain technology and real-world applications. Always learning, always
+            building.
           </p>
         </section>
 
@@ -46,10 +46,7 @@ const AndrewPage: NextPage = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {["Solidity", "Ethereum", "React", "TypeScript", "Node.js", "Hardhat", "Web3.js", "Smart Contracts"].map(
               skill => (
-                <div
-                  key={skill}
-                  className="px-4 py-3 bg-base-200 rounded-lg text-center font-medium"
-                >
+                <div key={skill} className="px-4 py-3 bg-base-200 rounded-lg text-center font-medium">
                   {skill}
                 </div>
               ),
