@@ -15,7 +15,6 @@ const SpokoiniyPage: NextPage = () => {
     <div className="min-h-screen flex flex-col lg:flex-row">
       {/* Left Panel */}
       <div className="lg:w-1/2 min-h-[40vh] lg:min-h-screen bg-gradient-to-br from-primary via-secondary to-accent p-8 lg:p-12 flex flex-col justify-center items-center text-primary-content relative overflow-hidden">
-
         <div className="absolute top-20 left-20 w-72 h-72 bg-base-content/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-base-content/10 rounded-full blur-3xl"></div>
 
@@ -37,14 +36,10 @@ const SpokoiniyPage: NextPage = () => {
           </div>
 
           {/* Name */}
-          <h1 className="text-6xl lg:text-7xl font-black mb-4 tracking-tight drop-shadow-lg">
-            Spokoiniy
-          </h1>
+          <h1 className="text-6xl lg:text-7xl font-black mb-4 tracking-tight drop-shadow-lg">Spokoiniy</h1>
 
           {/* Tagline */}
-          <p className="text-xl lg:text-2xl font-light mb-6 opacity-90">
-            Web3 Developer
-          </p>
+          <p className="text-xl lg:text-2xl font-light mb-6 opacity-90">Web3 Developer</p>
 
           {/* GitHub */}
           <div className="mt-8">
@@ -60,11 +55,10 @@ const SpokoiniyPage: NextPage = () => {
           </div>
         </div>
       </div>
-
+      
       {/* Right Panel */}
       <div className="lg:w-1/2 min-h-screen bg-base-200 p-8 lg:p-12 flex flex-col justify-center">
         <div className="max-w-lg mx-auto w-full space-y-6">
-
           {/* Wallet Card */}
           <div className="bg-base-100/80 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-base-content/10">
             <h3 className="text-sm font-semibold uppercase tracking-wider text-base-content/50 mb-3">Wallet Address</h3>
@@ -97,13 +91,16 @@ const SpokoiniyPage: NextPage = () => {
           <div className="text-center pt-6">
             <p className="text-base-content/50 text-sm">
               Part of{" "}
-              <Link href="https://buidlguidl.com" className="text-primary hover:underline font-semibold" target="_blank">
+              <Link 
+                href="https://buidlguidl.com" 
+                className="text-primary hover:underline font-semibold"
+                target="_blank"
+              >
                 BuidlGuidl
               </Link>{" "}
               Batch 22
             </p>
           </div>
-
         </div>
       </div>
     </div>
