@@ -41,7 +41,7 @@ const KseniaPage: NextPage = () => {
               </h1>
               <p className="text-base-content/60 text-sm md:text-base mb-3">Web3 Developer • Blockchain Enthusiast</p>
               <div className="inline-block">
-                <Address address="0x30172ff3ec7db91e59a84c8c5e9976b3a0a60557" />
+                <Address address="0x30172Ff3EC7Db91E59A84c8c5E9976b3A0A60557" />
               </div>
             </div>
           </div>
@@ -62,7 +62,7 @@ const KseniaPage: NextPage = () => {
           </div>
 
           {/* GitHub Box - Middle Right */}
-          <div className="md:col-span-1 bg-gradient-to-br from-primary to-secondary rounded-3xl p-6 flex items-center justify-center shadow-xl hover:shadow-2xl transition-shadow">
+          <div className="md:col-span-1 bg-gradient-to-br from-primary to-secondary rounded-3xl p-6 flex items-center justify-center shadow-xl">
             <Link
               href="https://github.com/kseniaeremekno"
               target="_blank"
