@@ -33,7 +33,7 @@ const BobPage: NextPage = () => {
         {/* Address Section */}
         <div className="flex justify-center">
           <div className="bg-base-100 rounded-xl px-6 py-3 border-2 border-secondary/30 shadow-lg">
-            <Address address="0x4667d9b7c789c231988ec631b22c5492ce60b3e9" />
+            <Address address="0x4667d9B7C789c231988EC631B22c5492Ce60b3E9" />
           </div>
         </div>
 
