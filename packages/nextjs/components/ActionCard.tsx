@@ -23,8 +23,7 @@ export function ActionCard({ href, icon, title, description }: ActionCardProps) 
           hover:-translate-y-1
         "
       >
-        <div className="action-card-icon">{icon}</div>
-
+        <div className="text-base-content">{icon}</div>
         <div>
           <h3 className="font-semibold">{title}</h3>
           <p className="text-sm opacity-70">{description}</p>

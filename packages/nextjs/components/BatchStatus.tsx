@@ -44,13 +44,24 @@ export function BatchStatus() {
 
           <div>
             <div className="text-sm opacity-60">Current phase</div>
-            <div className="mt-1 text-lg font-medium">Actively building</div>
+            <div className="mt-1 text-lg font-medium">Wrapping up</div>
           </div>
         </div>
 
         {/* Footer CTA */}
         <footer className="mt-10 flex justify-end">
-          <div className="batch-cta mt-6 text-sm font-medium">View builders →</div>
+          <div className="mt-6 text-right">
+            <span
+              className="
+              text-sm font-medium
+              text-primary-content
+              hover:opacity-80
+              transition
+              "
+            >
+              View builders →
+            </span>
+          </div>
         </footer>
       </section>
     </Link>

@@ -6,22 +6,34 @@ import { BatchStatus } from "~~/components/BatchStatus";
 
 const Home: NextPage = () => {
   return (
-    <div className="batch22-home min-h-screen w-full flex flex-col items-center">
-      <section className="hero relative flex flex-col items-center text-center px-5 pt-14 pb-10">
-        <h1 className="text-5xl font-semibold tracking-tight">
+    <div className="min-h-screen bg-base-200">
+      {/* Hero */}
+      <section className="relative flex flex-col items-center text-center px-5 pt-20 pb-16">
+        {/* Gradient glow */}
+        <div
+          className="
+            pointer-events-none absolute inset-x-0 top-0 -z-10 h-[420px]
+            bg-[radial-gradient(900px_400px_at_50%_0%,rgba(147,187,251,0.15),transparent_70%)]
+            dark:bg-[radial-gradient(900px_400px_at_50%_0%,rgba(109,124,255,0.18),transparent_70%)]
+          "
+        />
+
+        <h1 className="text-4xl font-bold tracking-tight">
           Batch <span className="opacity-90">22</span>
         </h1>
 
-        <p className="mt-4 max-w-xl text-lg opacity-70">A decentralized cohort learning and building Web3</p>
+        <p className="mt-4 max-w-xl text-lg text-base-content/70">A decentralized cohort learning and building Web3</p>
 
-        <div className="mt-6 h-px w-32 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+        <div className="mt-6 h-px w-32 bg-gradient-to-r from-transparent via-base-content/20 to-transparent" />
 
-        <div className="batch-state-wrapper">
+        {/* Batch status */}
+        <div className="mt-10">
           <BatchStatus />
         </div>
       </section>
 
-      <section className="relative -mt-6 flex justify-center">
+      {/* Actions */}
+      <section className="relative -mt-8 flex justify-center pb-20">
         <ActionCards />
       </section>
     </div>
