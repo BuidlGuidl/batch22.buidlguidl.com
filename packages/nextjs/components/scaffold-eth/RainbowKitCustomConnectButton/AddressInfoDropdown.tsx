@@ -57,8 +57,7 @@ export const AddressInfoDropdown = ({
     args: [address],
   });
   const isCheckedIn =
-    !!checkInContractAddress &&
-    checkInContractAddress !== "0x0000000000000000000000000000000000000000";
+    !!checkInContractAddress && checkInContractAddress !== "0x0000000000000000000000000000000000000000";
 
   const closeDropdown = () => {
     setSelectingNetwork(false);
