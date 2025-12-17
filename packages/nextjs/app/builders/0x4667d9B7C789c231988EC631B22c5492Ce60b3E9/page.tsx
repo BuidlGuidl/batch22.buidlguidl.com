@@ -95,7 +95,7 @@ const BobPage: NextPage = () => {
               href="https://buidlguidl.com"
               className="text-blue-500 hover:text-blue-600 underline font-medium"
               target="_blank"
-              >
+            >
               BuidlGuidl
             </Link>{" "}
             Batch 22 🚀
