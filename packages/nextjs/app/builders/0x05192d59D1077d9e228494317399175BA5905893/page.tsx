@@ -55,7 +55,7 @@ const SpokoiniyPage: NextPage = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Right Panel */}
       <div className="lg:w-1/2 min-h-screen bg-base-200 p-8 lg:p-12 flex flex-col justify-center">
         <div className="max-w-lg mx-auto w-full space-y-6">
@@ -91,8 +91,8 @@ const SpokoiniyPage: NextPage = () => {
           <div className="text-center pt-6">
             <p className="text-base-content/50 text-sm">
               Part of{" "}
-              <Link 
-                href="https://buidlguidl.com" 
+              <Link
+                href="https://buidlguidl.com"
                 className="text-primary hover:underline font-semibold"
                 target="_blank"
               >
