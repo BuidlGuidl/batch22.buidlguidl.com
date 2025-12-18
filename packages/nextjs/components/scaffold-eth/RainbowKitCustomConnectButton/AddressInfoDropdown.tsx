@@ -14,7 +14,6 @@ import {
   QrCodeIcon,
 } from "@heroicons/react/24/outline";
 import { ClockIcon } from "@heroicons/react/24/outline";
-import { CheckBadgeIcon } from "@heroicons/react/24/solid";
 import { BlockieAvatar } from "~~/components/scaffold-eth";
 import { useCopyToClipboard, useOutsideClick, useScaffoldReadContract } from "~~/hooks/scaffold-eth";
 import { getTargetNetworks } from "~~/utils/scaffold-eth";
@@ -75,14 +74,7 @@ export const AddressInfoDropdown = ({
             {isENS(displayName) ? displayName : checkSumAddress?.slice(0, 6) + "..." + checkSumAddress?.slice(-4)}
           </span>
           <span className="ml-1 flex items-center gap-1">
-            {isMember ? (
-              <span className="badge badge-success badge-xs gap-1">
-                <CheckBadgeIcon className="h-3 w-3" />
-                Member
-              </span>
-            ) : (
-              <span className="badge badge-ghost badge-xs">Not in batch</span>
-            )}
+            {!isMember && <span className="badge badge-ghost badge-xs">Not in batch</span>}
             {isMember && isCheckedIn ? (
               <span className="badge badge-info badge-xs gap-1">
                 <CheckCircleIcon className="h-3 w-3" />
