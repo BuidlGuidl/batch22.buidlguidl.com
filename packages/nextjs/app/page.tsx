@@ -6,9 +6,17 @@ import { BatchStatus } from "~~/components/BatchStatus";
 
 const Home: NextPage = () => {
   return (
-    <div className="min-h-screen bg-base-200">
+    <div className="min-h-screen bg-base-200 overflow-x-hidden">
       {/* Hero */}
-      <section className="relative flex flex-col items-center text-center px-5 pt-20 pb-16">
+      <section
+        className="
+        relative flex flex-col items-center text-center
+        px-4
+        pt-8 pb-6
+        sm:pt-12 sm:pb-10
+        md:pt-20 md:pb-16
+        "
+      >
         {/* Gradient glow */}
         <div
           className="
@@ -18,11 +26,13 @@ const Home: NextPage = () => {
           "
         />
 
-        <h1 className="text-4xl font-bold tracking-tight">
+        <h1 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
           Batch <span className="opacity-90">22</span>
         </h1>
 
-        <p className="mt-4 max-w-xl text-lg text-base-content/70">A decentralized cohort learning and building Web3</p>
+        <p className="mt-3 max-w-md text-sm text-base-content/70 sm:text-base md:text-lg">
+          A decentralized cohort learning and building Web3
+        </p>
 
         <div className="mt-6 h-px w-32 bg-gradient-to-r from-transparent via-base-content/20 to-transparent" />
 

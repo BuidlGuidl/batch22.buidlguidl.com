@@ -3,7 +3,14 @@ import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 export function ActionCards() {
   return (
-    <section className="relative mt-10 flex justify-center gap-24">
+    <section
+      className="
+    relative mt-6
+    flex flex-col items-center gap-4
+    pb-12
+    sm:flex-row sm:justify-center sm:gap-8 sm:pb-20
+  "
+    >
       <ActionCard
         href="/debug"
         icon={<BugAntIcon className="h-8 w-8" />}
