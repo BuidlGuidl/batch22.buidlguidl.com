@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { Address } from "@scaffold-ui/components";
 import type { NextPage } from "next";
 
@@ -16,7 +16,6 @@ const KseniaPage: NextPage = () => {
       <div className="max-w-6xl mx-auto">
         {/* Bento Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[minmax(120px,auto)]">
-
           {/* Avatar Box - Top Left */}
           <div className="md:col-span-1 bg-gradient-to-br from-primary/10 to-secondary/10 backdrop-blur-sm rounded-3xl p-6 flex items-center justify-center border border-primary/20">
             <div className="relative">
@@ -36,9 +35,7 @@ const KseniaPage: NextPage = () => {
           {/* Name & Title Box - Top Right */}
           <div className="md:col-span-2 bg-base-100 rounded-3xl p-6 md:p-8 border border-base-content/10 shadow-xl">
             <div className="flex flex-col h-full justify-center">
-              <h1 className="text-4xl md:text-6xl font-black mb-3 tracking-tight text-base-content">
-                Ksenchi
-              </h1>
+              <h1 className="text-4xl md:text-6xl font-black mb-3 tracking-tight text-base-content">Ksenchi</h1>
               <p className="text-base-content/60 text-sm md:text-base mb-3">Web3 Developer • Blockchain Enthusiast</p>
               <div className="inline-block">
                 <Address address="0x30172Ff3EC7Db91E59A84c8c5E9976b3A0A60557" />
@@ -89,13 +86,16 @@ const KseniaPage: NextPage = () => {
           <div className="md:col-span-3 bg-base-200/50 rounded-3xl p-4 text-center border border-base-content/5">
             <p className="text-base-content/50 text-sm">
               Part of{" "}
-              <Link href="https://buidlguidl.com" className="text-primary hover:underline font-semibold" target="_blank">
+              <Link
+                href="https://buidlguidl.com"
+                className="text-primary hover:underline font-semibold"
+                target="_blank"
+              >
                 BuidlGuidl
               </Link>{" "}
               Batch 22
             </p>
           </div>
-
         </div>
       </div>
     </div>
