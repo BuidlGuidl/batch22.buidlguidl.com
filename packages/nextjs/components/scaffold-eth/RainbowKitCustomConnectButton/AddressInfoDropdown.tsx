@@ -13,8 +13,9 @@ import {
   EyeIcon,
   QrCodeIcon,
 } from "@heroicons/react/24/outline";
+import { ClockIcon } from "@heroicons/react/24/outline";
 import { BlockieAvatar } from "~~/components/scaffold-eth";
-import { useCopyToClipboard, useOutsideClick } from "~~/hooks/scaffold-eth";
+import { useCopyToClipboard, useOutsideClick, useScaffoldReadContract } from "~~/hooks/scaffold-eth";
 import { getTargetNetworks } from "~~/utils/scaffold-eth";
 import { isENS } from "~~/utils/scaffold-eth/common";
 
@@ -44,6 +45,19 @@ export const AddressInfoDropdown = ({
   const [selectingNetwork, setSelectingNetwork] = useState(false);
   const dropdownRef = useRef<HTMLDetailsElement>(null);
 
+  const { data: isMember } = useScaffoldReadContract({
+    contractName: "BatchRegistry",
+    functionName: "allowList",
+    args: [address],
+  });
+  const { data: checkInContractAddress } = useScaffoldReadContract({
+    contractName: "BatchRegistry",
+    functionName: "yourContractAddress",
+    args: [address],
+  });
+  const isCheckedIn =
+    !!checkInContractAddress && checkInContractAddress !== "0x0000000000000000000000000000000000000000";
+
   const closeDropdown = () => {
     setSelectingNetwork(false);
     dropdownRef.current?.removeAttribute("open");
@@ -58,6 +72,21 @@ export const AddressInfoDropdown = ({
           <BlockieAvatar address={checkSumAddress} size={30} ensImage={ensAvatar} />
           <span className="ml-2 mr-1">
             {isENS(displayName) ? displayName : checkSumAddress?.slice(0, 6) + "..." + checkSumAddress?.slice(-4)}
+          </span>
+          <span className="ml-1 flex items-center gap-1">
+            {!isMember && <span className="badge badge-ghost badge-xs">Not in batch</span>}
+            {isMember && isCheckedIn ? (
+              <span className="badge badge-info badge-xs gap-1">
+                <CheckCircleIcon className="h-3 w-3" />
+                Checked-in
+              </span>
+            ) : null}
+            {isMember && !isCheckedIn ? (
+              <span className="badge badge-warning badge-xs gap-1">
+                <ClockIcon className="h-3 w-3" />
+                Not checked-in
+              </span>
+            ) : null}
           </span>
           <ChevronDownIcon className="h-6 w-4 ml-2 sm:ml-0" />
         </summary>
